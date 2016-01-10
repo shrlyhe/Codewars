@@ -14,19 +14,19 @@
 
 public class JadenCase {
 
-	public String toJadenCase(String phrase) {
+ public String toJadenCase(String phrase) {
     if (phrase == null || phrase == "") {
       return null;
     }
-		else {
+    else {
     //Uppercase first letter
       char [] array = phrase.toCharArray();
       array[0] = Character.toUpperCase(array[0]);
     //Uppercase all others
-		  for (int i = 1; i <array.length; i++) {
+	for (int i = 1; i <array.length; i++) {
           if(Character.isWhitespace(array[i-1])) {
           	array[i] = Character.toUpperCase(array[i]);
-	      }
+	 }
       }
       return new String(array);
     }
